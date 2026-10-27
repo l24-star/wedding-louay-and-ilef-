@@ -4,12 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f3e6d0">
-<title>دعوة حب | لؤي وإليف</title>
+<title>دعوة زفاف | لؤي وإيلاف</title>
 <style>
 :root{--cream:#f3e6d0;--paper:#fff7e9;--olive:#702b2b;--olive2:#91433a;--gold:#c69b52;--red:#8f2929;--ink:#3b211c}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.8;transition:background 1.5s ease}
 body:before{content:"";position:fixed;inset:10px;border:1px solid #c69b5266;pointer-events:none;z-index:5}
+/* Reveal the invitation only after the doors open: soft light, staggered text, and floating petals */
+body:after{content:"";position:fixed;inset:0;z-index:10;pointer-events:none;background:radial-gradient(circle at center,#fff6df 0%,#f3e6d0 45%,transparent 75%);opacity:0;visibility:hidden}
+body.entering:after{visibility:visible;animation:welcomeGlow 1.25s ease-out forwards}
+@keyframes welcomeGlow{0%{opacity:.95}45%{opacity:.5}100%{opacity:0}}
+.content>*{opacity:0;transform:translateY(14px)}
+body.entered .content>*{animation:contentRise .8s ease forwards}
+body.entered .content>*:nth-child(1){animation-delay:.12s}body.entered .content>*:nth-child(2){animation-delay:.22s}body.entered .content>*:nth-child(3){animation-delay:.3s}body.entered .content>*:nth-child(4){animation-delay:.38s}body.entered .content>*:nth-child(5){animation-delay:.48s}body.entered .content>*:nth-child(6){animation-delay:.58s}body.entered .content>*:nth-child(7){animation-delay:.68s}body.entered .content>*:nth-child(8){animation-delay:.78s}body.entered .content>*:nth-child(9){animation-delay:.88s}body.entered .content>*:nth-child(10){animation-delay:.98s}
+@keyframes contentRise{to{opacity:1;transform:translateY(0)}}
+.petal{position:fixed;top:-30px;z-index:6;pointer-events:none;color:#b86a70;opacity:0;font-size:18px;animation:petalFall 5.8s ease-in forwards}
+@keyframes petalFall{0%{opacity:0;transform:translateY(-20px) rotate(0)}12%{opacity:.65}100%{opacity:0;transform:translateY(110vh) rotate(300deg)}}
+
 .hero{min-height:100svh;display:grid;place-items:center;padding:38px 20px;position:relative;overflow:hidden;background:radial-gradient(ellipse at top,#fff8e9 0%,#f3e6d0 70%,#e7d0ad 100%)}
 .arch{position:absolute;top:6%;width:min(82vw,440px);height:min(84vw,460px);border:2px solid var(--gold);border-bottom:0;border-radius:220px 220px 0 0;opacity:.55}
 .arch:before,.arch:after{content:"";position:absolute;inset:13px;border:1px solid var(--olive2);border-bottom:0;border-radius:205px 205px 0 0}.arch:after{inset:25px;border-color:#c69b5277}
@@ -19,7 +30,7 @@ body.entered .content{opacity:1;transform:translateY(0)}
 .kicker{letter-spacing:3px;color:var(--olive);font-size:12px}h1{font-family:Georgia,serif;font-size:clamp(42px,10vw,76px);line-height:1.25;color:var(--olive);font-weight:500;margin:18px 0 10px}.amp{color:var(--gold);font-style:italic}.flourish{color:var(--gold);font-size:26px;letter-spacing:7px;margin:8px}.intro{font-size:17px;color:#6b5143;max-width:540px;margin:16px auto 24px}
 .date-pill{display:inline-block;border:1px solid var(--gold);padding:10px 22px;color:var(--olive);background:#fff7e980}
 button{border:0;cursor:pointer;font:inherit}.primary{margin-top:20px;padding:12px 24px;border-radius:2px;background:var(--olive);color:#fff9ed;box-shadow:0 7px 20px #4d2a2d20;transition:transform .25s ease,background .25s ease}.primary:hover{transform:translateY(-2px);background:var(--olive2)}
-section{padding:76px 20px;text-align:center;opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}section.visible{opacity:1;transform:translateY(0)}.section-inner{max-width:850px;margin:auto}h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(29px,6vw,42px);color:var(--olive);margin:0 0 12px}.rule{width:90px;height:1px;background:var(--gold);margin:20px auto 28px}
+section{padding:76px 20px;text-align:center;opacity:0;transform:translateY(30px);transition:opacity 1.15s ease,transform 1.15s cubic-bezier(.2,.7,.2,1)}section.visible{opacity:1;transform:translateY(0)}.section-inner{max-width:850px;margin:auto}h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(29px,6vw,42px);color:var(--olive);margin:0 0 12px}.rule{width:90px;height:1px;background:var(--gold);margin:20px auto 28px}
 .countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:600px;margin:30px auto}.unit{padding:18px 6px;border:1px solid #c69b5270;background:#fff7e9aa}.num{font-family:Georgia,serif;font-size:clamp(26px,7vw,42px);color:var(--olive);direction:ltr}.unit small{display:block;color:#79755f;font-size:12px}
 .pattern{background:#eadbc4;position:relative}.pattern:before{content:"✦  ❋  ✦  ❋  ✦";display:block;color:var(--red);letter-spacing:8px;margin-bottom:15px;opacity:.7}.card{background:var(--paper);border:1px solid #c69b5266;padding:30px 20px;max-width:650px;margin:0 auto;box-shadow:0 12px 40px #5b573015}.card p{margin:8px 0}.stamp{display:inline-grid;place-items:center;width:66px;height:66px;border:1px solid var(--gold);border-radius:50%;color:var(--red);font-size:24px;margin-bottom:12px}
 .media-img{display:block;width:min(100%,520px);height:auto;margin:22px auto;border:1px solid var(--gold);padding:5px;background:var(--paper);opacity:0;transform:scale(.96);transition:opacity 1.3s ease,transform 1.3s ease}.media-img.visible{opacity:1;transform:scale(1)}
@@ -31,22 +42,23 @@ section{padding:76px 20px;text-align:center;opacity:0;transform:translateY(30px)
 .door-label{position:absolute;z-index:2;left:0;right:0;top:17%;text-align:center;color:#ffe5a7;text-shadow:0 2px 5px #260b0b;padding:0 15px;pointer-events:none}.door-label small{display:block;font-size:12px;letter-spacing:2px}.door-label strong{display:block;font-family:Georgia,serif;font-size:clamp(25px,7vw,40px);font-weight:normal;margin:8px 0}.door-hint{position:absolute;z-index:3;bottom:7%;left:0;right:0;text-align:center;color:#fff1cf;font-size:14px;animation:hintPulse 1.8s infinite}@keyframes hintPulse{50%{opacity:.55;transform:translateY(-3px)}}
 .door-intro.opening .door-left{transform:rotateY(-105deg)}.door-intro.opening .door-right{transform:rotateY(105deg)}.door-intro.opening .door-label,.door-intro.opening .door-hint{opacity:0;transition:opacity .4s}.door-intro.opening{background:#f3e6d0}.door-intro.opening .door-frame{animation:doorGlow 1.6s ease forwards}@keyframes doorGlow{0%{filter:drop-shadow(0 18px 35px #0008)}55%{filter:drop-shadow(0 0 35px #e6c47c)}100%{filter:drop-shadow(0 18px 35px #0000)}}
 @media(max-width:480px){.countdown{gap:6px}.unit{padding:14px 2px}.intro{font-size:15px}.content{padding-inline:4px}}
-@media(prefers-reduced-motion:reduce){.door-leaf,.door-intro,.content,section,.media-img{transition-duration:.3s}.door-hint{animation:none}.door-intro.opening .door-frame{animation:none}}
+@media(prefers-reduced-motion:reduce){.door-leaf,.door-intro,.content,section,.media-img{transition-duration:.3s}.door-hint,.content>*,body.entering:after,.petal{animation:none!important}.door-intro.opening .door-frame{animation:none}}
 </style>
 </head>
 <body>
-<div class="door-intro" id="doorIntro" role="button" tabindex="0" aria-label="اضغط لفتح باب الدعوة">
-  <div class="door-frame"><div class="door-arch"></div><div class="door-label"><small>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</small><strong>لؤي &amp; إليف</strong><small>10 مارس 2035</small></div><div class="door-leaf door-left"><span class="door-knob"></span></div><div class="door-leaf door-right"><span class="door-knob"></span></div><div class="door-hint">✦ اضغط على الباب باش تدخل ✦</div>
+<div class="door-intro" id="doorIntro" role="button" tabindex="0" aria-label="اضغط لفتح باب دعوة زفاف لؤي وإيلاف">
+  <div class="door-frame"><div class="door-arch"></div><div class="door-label"><small>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</small><strong>لؤي &amp; إيلاف</strong><small>10 مارس 2035</small></div><div class="door-leaf door-left"><span class="door-knob"></span></div><div class="door-leaf door-right"><span class="door-knob"></span></div><div class="door-hint">✦ اضغط على الباب باش تدخل ✦</div>
   </div>
 </div>
 <header class="hero"><div class="arch"></div><span class="motif m1">✿</span><span class="motif m2">❋</span><span class="motif m3">✦</span><span class="motif m4">✿</span>
-  <div class="content"><div class="kicker">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</div><div class="flourish">❦ ۞ ❦</div><p>بكلّ الحبّ، وعلى نغمة الفرح التونسيّ الأصيل</p><h1>لؤي <span class="amp">&amp;</span> إليف</h1><div class="flourish">✧ ❋ ✧</div><p class="intro">حكاية حبّ تكبر بالدعاء، وتزدان بالصبر، وتحلم بيوم يجمع القلوب على الخير والمودّة.</p><div class="date-pill">10 مارس 2035</div><br><button class="primary" onclick="document.querySelector('#count').scrollIntoView({behavior:'smooth'})">شوف العدّ التنازلي ↓</button></div>
+  <div class="content"><div class="kicker">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</div><div class="flourish">❦ ۞ ❦</div><p>بكلّ الحبّ، وعلى نغمة الفرح التونسيّ الأصيل</p><h1>لؤي <span class="amp">&amp;</span> إيلاف</h1><div class="flourish">✧ ❋ ✧</div><p class="intro">بقلوب يملؤها الحبّ والامتنان، ندعوكم لمشاركتنا فرحة زفافنا، في يومٍ نرجو أن يكون بداية عمرٍ مليء بالمودّة والرحمة والذكريات الجميلة.</p><div class="date-pill">يوم 10 مارس 2035</div><br><button class="primary" onclick="document.querySelector('#invitation').scrollIntoView({behavior:'smooth'})">اقرأوا دعوتنا ♡</button></div>
 </header>
+<section id="invitation" class="invitation-section"><div class="section-inner"><p class="kicker">دعوة من القلب</p><h2>فرحتنا تكمل بيكم</h2><div class="rule"></div><div class="card"><div class="stamp">♡</div><p>بكلّ الحبّ والفرحة، نتشرّف بدعوتكم لمشاركتنا فرحة زفاف</p><h2 style="margin:12px 0 18px">لؤي <span class="amp">&amp;</span> إيلاف</h2><p>نسأل الله أن يبارك لنا، ويبارك علينا، ويجمع بيننا في خير، وأن يجعل بيتنا عامرًا بالمودّة والرحمة والسكينة، ويرزقنا أيّامًا جميلةً وقلوبًا شاكرة.</p><p>حضوركم يشرّفنا، وفرحتكم معنا تزيد يومنا بهجةً وتجعله ذكرى لا تُنسى.</p><div class="flourish">❦ ✧ ❦</div><small>بالمحبّة نبدأ حكايةً جديدة، وبالدعاء يزهر الطريق</small></div></div></section>
 <section id="count"><div class="section-inner"><p class="kicker">نستناو في النهار الجميل</p><h2>حتى يجي نهارنا</h2><div class="rule"></div><p>10 مارس 2035</p><div class="countdown" aria-live="polite"><div class="unit"><div class="num" id="days">—</div><small>نهار</small></div><div class="unit"><div class="num" id="hours">—</div><small>ساعة</small></div><div class="unit"><div class="num" id="mins">—</div><small>دقيقة</small></div><div class="unit"><div class="num" id="secs">—</div><small>ثانية</small></div></div></div></section>
-<section class="pattern"><div class="section-inner"><h2>على الطريقة التونسية</h2><div class="rule"></div><div class="card"><div class="stamp">❦</div><p>من ريحة الياسمين، لزرقة سيدي بوسعيد، لنقوش الزخرفة التونسية ودفء اللمة والأحباب.</p><p>يا ربّ اجعل القادم أجمل، واكتب لنا الخير والبركة، واجمعنا ديما على المحبّة والرضا.</p><div class="flourish">✦ ۞ ✦</div><small>فرحة على قدّ القلب، وأصلها المحبّة</small></div></div></section>
+<section class="pattern"><div class="section-inner"><h2>دعاء من القلب</h2><div class="rule"></div><div class="card"><div class="stamp">❦</div><p>يا ربّ اجعل هذا الزواج بداية خير، واكتب للؤي وإيلاف السعادة والرضا، وبارك لهما في أيّامهما، وألّف بين قلبيهما، واجعل المحبّة بينهما تكبر مع كلّ سنة.</p><p>اللهم ارزقهما سكينةً لا تزول، وفرحًا يتجدّد، ورفقةً طيّبةً في كلّ دروب الحياة.</p><div class="flourish">✦ ۞ ✦</div><small>فرحة على قدّ القلب، وأصلها المحبّة</small></div></div></section>
 <section id="memories"><div class="section-inner"><h2>ذكرياتنا ❤️</h2><div class="rule"></div><p>صورة من ذكرياتنا ❤️</p><img class="media-img" src="photo.png" alt="صورتنا"></div></section>
 <audio id="backgroundMusic" src="music.mp3" loop preload="auto"></audio>
-<footer>صُنعت بكلّ محبّة · لؤي وإليف · 2035</footer>
+<footer>بكلّ الحبّ والدعاء · لؤي وإيلاف · 2035</footer>
 <button id="musicToggle" class="music" type="button" aria-label="إيقاف أو تشغيل الموسيقى">♫ تشغيل الموسيقى</button>
 <script>
 const target=new Date('2035-03-10T00:00:00');
@@ -58,7 +70,8 @@ async function startMusic(){try{await backgroundMusic.play()}catch(e){}updateMus
 musicToggle.addEventListener('click',async()=>{if(backgroundMusic.paused){await startMusic()}else{backgroundMusic.pause()}updateMusicButton()});backgroundMusic.addEventListener('play',updateMusicButton);backgroundMusic.addEventListener('pause',updateMusicButton);
 window.addEventListener('load',()=>{startMusic()});
 const doorIntro=document.getElementById('doorIntro');let doorOpened=false;
-async function openDoor(){if(doorOpened)return;doorOpened=true;await startMusic();doorIntro.classList.add('opening');window.setTimeout(()=>{document.body.classList.add('entered');document.getElementById('count').classList.add('visible')},550);window.setTimeout(()=>doorIntro.classList.add('dismissed'),1600);window.setTimeout(()=>{doorIntro.style.display='none'},2600)}
+async function openDoor(){if(doorOpened)return;doorOpened=true;await startMusic();doorIntro.classList.add('opening');window.setTimeout(()=>{document.body.classList.add('entering')},1050);window.setTimeout(()=>{document.body.classList.add('entered');document.getElementById('invitation').classList.add('visible');createPetals()},1450);window.setTimeout(()=>doorIntro.classList.add('dismissed'),1700);window.setTimeout(()=>{doorIntro.style.display='none'},2550)}
+function createPetals(){for(let i=0;i<14;i++){const petal=document.createElement('span');petal.className='petal';petal.textContent=i%2?'✿':'❀';petal.style.left=(Math.random()*100)+'%';petal.style.animationDelay=(Math.random()*1.8)+'s';petal.style.fontSize=(12+Math.random()*12)+'px';document.body.appendChild(petal);setTimeout(()=>petal.remove(),8000)}}
 doorIntro.addEventListener('click',openDoor);doorIntro.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openDoor()}});
 const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}})},{threshold:.12});
 document.querySelectorAll('section,.media-img').forEach(el=>revealObserver.observe(el));
