@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5efdf">
+<title>دعوة حب | لؤي وإليف</title>
+<style>
+:root{--cream:#f7f1e4;--paper:#fffaf0;--olive:#4d5a3d;--olive2:#68734d;--gold:#b18b48;--red:#9c3e3e;--ink:#2e3327}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Tahoma,"Arial",sans-serif;line-height:1.8}
+body:before{content:"";position:fixed;inset:10px;border:1px solid #b18b4866;pointer-events:none;z-index:5}
+.hero{min-height:100svh;display:grid;place-items:center;padding:38px 20px;position:relative;overflow:hidden;background:radial-gradient(ellipse at top,#fffdf6 0%,var(--cream) 65%)}
+.arch{position:absolute;top:6%;width:min(82vw,440px);height:min(84vw,460px);border:2px solid var(--gold);border-bottom:0;border-radius:220px 220px 0 0;opacity:.55}
+.arch:before,.arch:after{content:"";position:absolute;inset:13px;border:1px solid var(--olive2);border-bottom:0;border-radius:205px 205px 0 0}
+.arch:after{inset:25px;border-color:#b18b4877}
+.motif{position:absolute;color:var(--red);font-size:25px;opacity:.75}
+.m1{top:15%;right:12%}.m2{top:22%;left:12%}.m3{bottom:12%;right:15%}.m4{bottom:15%;left:14%}
+.content{position:relative;text-align:center;max-width:720px;width:100%;padding:36px 16px}
+.kicker{letter-spacing:3px;color:var(--olive);font-size:12px}
+h1{font-family:Georgia,serif;font-size:clamp(42px,10vw,76px);line-height:1.25;color:var(--olive);font-weight:500;margin:18px 0 10px}
+.amp{color:var(--gold);font-style:italic}
+.flourish{color:var(--gold);font-size:26px;letter-spacing:7px;margin:8px}
+.intro{font-size:17px;color:#555944;max-width:540px;margin:16px auto 24px}
+.date-pill{display:inline-block;border:1px solid var(--gold);padding:10px 22px;color:var(--olive);background:#fffaf080}
+button{border:0;cursor:pointer;font:inherit}
+.primary{margin-top:20px;padding:12px 24px;border-radius:2px;background:var(--olive);color:#fff9ed;box-shadow:0 7px 20px #4d5a3d20}
+section{padding:76px 20px;text-align:center}
+.section-inner{max-width:850px;margin:auto}
+h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(29px,6vw,42px);color:var(--olive);margin:0 0 12px}
+.rule{width:90px;height:1px;background:var(--gold);margin:20px auto 28px}
+.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:600px;margin:30px auto}
+.unit{padding:18px 6px;border:1px solid #b18b4870;background:#fffaf0aa}
+.num{font-family:Georgia,serif;font-size:clamp(26px,7vw,42px);color:var(--olive);direction:ltr}
+.unit small{display:block;color:#79755f;font-size:12px}
+.pattern{background:#e9e4d3;position:relative}
+.pattern:before{content:"✦  ❋  ✦  ❋  ✦";display:block;color:var(--red);letter-spacing:8px;margin-bottom:15px;opacity:.7}
+.card{background:var(--paper);border:1px solid #b18b4866;padding:30px 20px;max-width:650px;margin:0 auto;box-shadow:0 12px 40px #5b573015}
+.card p{margin:8px 0}
+.stamp{display:inline-grid;place-items:center;width:66px;height:66px;border:1px solid var(--gold);border-radius:50%;color:var(--red);font-size:24px;margin-bottom:12px}
+.media-img{display:block;width:min(100%,520px);height:auto;margin:22px auto;border:1px solid var(--gold);padding:5px;background:var(--paper)}.memory-video{display:block;width:100%;max-width:650px;margin:22px auto;border:1px solid var(--gold);padding:5px;background:var(--paper)}.audio-player{width:min(100%,520px);margin:18px auto;display:block}.music{position:fixed;bottom:22px;left:22px;z-index:7;background:var(--olive);color:#fff9ed;border:1px solid var(--gold);border-radius:50px;padding:10px 16px;font-size:13px;box-shadow:0 5px 18px #0002}
+footer{text-align:center;padding:30px;color:#77745f;font-size:12px}
+@media(max-width:480px){.countdown{gap:6px}.unit{padding:14px 2px}.intro{font-size:15px}.content{padding-inline:4px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="arch"></div><span class="motif m1">✿</span><span class="motif m2">❋</span><span class="motif m3">✦</span><span class="motif m4">✿</span>
+  <div class="content">
+    <div class="kicker">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</div>
+    <div class="flourish">❦ ۞ ❦</div>
+    <p>بكلّ الحبّ، وعلى نغمة الفرح التونسيّ الأصيل</p>
+    <h1>لؤي <span class="amp">&amp;</span> إليف</h1>
+    <div class="flourish">✧ ❋ ✧</div>
+    <p class="intro">حكاية حبّ تكبر بالدعاء، وتزدان بالصبر، وتحلم بيوم يجمع القلوب على الخير والمودّة.</p>
+    <div class="date-pill">10 مارس 2035</div>
+    <br><button class="primary" onclick="document.querySelector('#count').scrollIntoView({behavior:'smooth'})">شوف العدّ التنازلي ↓</button><br><button class="primary" onclick="document.getElementById('introMusic').play()">▶ شغّل موسيقى الدخول</button><audio id="introMusic" src="music.mp3" loop></audio>
+  </div>
+</header>
+<section id="count">
+  <div class="section-inner">
+    <p class="kicker">نستناو في النهار الجميل</p>
+    <h2>حتى يجي نهارنا</h2><div class="rule"></div>
+    <p>10 مارس 2035</p>
+    <div class="countdown" aria-live="polite">
+      <div class="unit"><div class="num" id="days">—</div><small>نهار</small></div>
+      <div class="unit"><div class="num" id="hours">—</div><small>ساعة</small></div>
+      <div class="unit"><div class="num" id="mins">—</div><small>دقيقة</small></div>
+      <div class="unit"><div class="num" id="secs">—</div><small>ثانية</small></div>
+    </div>
+  </div>
+</section>
+<section class="pattern">
+  <div class="section-inner">
+    <h2>على الطريقة التونسية</h2><div class="rule"></div>
+    <div class="card">
+      <div class="stamp">❦</div>
+      <p>من ريحة الياسمين، لزرقة سيدي بوسعيد، لنقوش الزخرفة التونسية ودفء اللمة والأحباب.</p>
+      <p>يا ربّ اجعل القادم أجمل، واكتب لنا الخير والبركة، واجمعنا ديما على المحبّة والرضا.</p>
+      <div class="flourish">✦ ۞ ✦</div>
+      <small>فرحة على قدّ القلب، وأصلها المحبّة</small>
+    </div>
+  </div>
+</section>
+<section id="memories">
+  <div class="section-inner">
+    <h2>ذكرياتنا ❤️</h2><div class="rule"></div>
+    <p>كل صورة وفيديو حكاية من حكايتنا.</p>
+    <img class="media-img" src="photo.png" alt="صورة من ذكرياتنا" loading="lazy">
+    <video class="memory-video" controls playsinline preload="metadata"><source src="memories.mp4" type="video/mp4">المتصفح لا يدعم تشغيل الفيديو.</video>
+  </div>
+</section>
+<section id="music">
+  <div class="section-inner">
+    <h2>موسيقى الدخول 🎵</h2><div class="rule"></div>
+    <p><strong>Until I Found You — Stephen Sanchez</strong></p>
+    <p>اضغط تشغيل للاستماع، والإيقاف يحافظ على موضع الأغنية.</p>
+    <audio class="audio-player" controls loop preload="metadata"><source src="music.mp3" type="audio/mpeg">المتصفح لا يدعم تشغيل الصوت.</audio>
+  </div>
+</section>
+<footer>صُنعت بكلّ محبّة · لؤي وإليف · 2035</footer>
+<button class="music" onclick="document.querySelector('#music').scrollIntoView({behavior:'smooth'})">♫ الأغنية</button>
+<script>
+const target = new Date('2035-03-10T00:00:00');
+function tick(){
+ let diff=Math.max(0,target.getTime()-Date.now());
+ const d=Math.floor(diff/86400000); diff%=86400000;
+ const h=Math.floor(diff/3600000); diff%=3600000;
+ const m=Math.floor(diff/60000); const s=Math.floor((diff%60000)/1000);
+ document.getElementById('days').textContent=d.toLocaleString('en-US');
+ document.getElementById('hours').textContent=String(h).padStart(2,'0');
+ document.getElementById('mins').textContent=String(m).padStart(2,'0');
+ document.getElementById('secs').textContent=String(s).padStart(2,'0');
+}
+tick();setInterval(tick,1000);
+</script>
+</body></html>
